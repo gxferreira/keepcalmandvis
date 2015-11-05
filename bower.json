@@ -1,0 +1,21 @@
+{
+  "name": "keepcalmandvis",
+  "homepage": "https://github.com/gxferreira/keepcalmandvis",
+  "authors": [
+    "Guilherme Xavier <gxferreira@gmail.com>"
+  ],
+  "description": "Site para apoio do curso keepcalmandvis",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
