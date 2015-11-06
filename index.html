@@ -1,7 +1,9 @@
 <html>
 <head>
+	<meta charset="UTF-8"/>
 	<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></link>-->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css"></link>
+	<link rel="stylesheet" href="assets/css/main.css"></link>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -16,5 +18,182 @@
 			</div>
 		</div>
 	</nav>
-	<h1>Keep Calm and Visualize</h1>
+	<h2>Koding</h2>
+	<p>
+		Para este mini-curso será utilizado a plataforma de desenvolvimento Koding. Acesse o link https://koding.com e crie uma conta. 
+	</p>
+	<h2>Introdução HTML e CSS</h2>
+	<p>HTML (HyperText Markup Language) usa uma sintax que consiste de elementos inclusos nos símbolos ‘<’ e ‘>’ chamados de Tags. Apesar de haver diferentes designs e apresentações para uma página web, a estrutura básica consiste em:</p>
+	<img class="baseImage" src="imagens/htmlSkeleton.png">
+	<p>Onde o código para esta estrutura é:</p>
+	<p>
+		<code>
+			<pre>
+				&lt;!DOCTYPE html>
+				&lt;html>
+				&lt;head>
+				&lt;title>Titulo&lt;/title>
+				&lt;/head>
+				&lt;body>
+				&lt;h1>Conteúdo da Página&lt;/h1>
+				&lt;p> Textos, imagens, vídeos, visualizações, etc.. &lt;/p>
+				&lt;/body>
+				&lt;/html>
+			</pre>
+		</code>
+	</p>
+	<p>Dentro da pasta “Web” no seu workspace do koding no arquivo chamado “index.html”, copie e cole e código acima e salve com o nome de “index.html”. Abra este arquivo usando um navegador web para visualizar a estrutura. A seguir estão listados importantes Tags usadas em páginas HTML.</p>
+	<ul>
+		<li><b>html</b> – Encapsula todo o documento HTML.</li>
+		<li><b>head</b> – Contém informações sobre o documento em si, como o título ou algum arquivo externo (CSS, script, etc...).</li>
+		<li><b>title</b> – Título da página.</li>
+		<li><b>body</b> – A parte principal do documento.</li>
+		<li><b>h1, h2, h3, h4, h5, h6</b> – Títulos (quando maior o número, menor o tamanho do texto).</li>
+		<li><b>p</b> - Parágrafo.</li>
+		<li><b>br</b> – Quebra de linha.</li>
+		<li><b>em</b> – Enfatiza o texto.</li>
+		<li><b>strong ou b</b> – Negrito.</li>
+		<li><b>a</b> – Define um link, pode ser usado para navegação entre diferentes páginas web.</li>
+		<li><b>img</b> – Carrega uma imagem.</li>
+		<li><b>ul, ol, li</b> – Define listas.</li>
+		<li><b>table, th, td, tr</b> – Define uma tabela.</li>
+		<li><b>span</b> – Container genérico para conteúdos textuais ou outras tags.</li>
+		<li><b>div</b> – Cria uma divisão da estrutura e pode alocar seções da páginas.</li>
+	</ul>
+	<p>Um conceito importante para o uso de HTML e CSS são os atributos ‘id’ e ‘class’ que podem ser usados em conjunto com uma Tag HTML para sua identificação. O atributo ‘id’ é um identificador único, enquanto que ‘class’ pode ser compartilhado entre diferentes elementos. Na estrutura criada anteriormente e copiada dentro do arquivo “index.html”, adicione uma divisão “div” dentro da Tag “body” como mostrado abaixo.</p>
+	<code>
+		<pre>
+			&lt;!DOCTYPE html>
+			&lt;html>
+			&lt;head>
+			&lt;title>Titulo&lt;/title>
+			&lt;/head>
+			&lt;body>
+			&lt;div id="container_principal">&lt;/div>
+			&lt;/body>
+			&lt;/html>
+		</pre>
+	</code>
+	<p>
+		Enquanto um arquivo HTML lida diretamente com o conteúdo e a estrutura apresentada, o CSS (Cascading Style Sheets) é usado para a formatação do estilo da página web. Um arquivo CSS consiste em seletores, propriedades e valores.
+	</p>
+	<code>
+		<pre>
+			Seletor1,
+			Seletor2,
+			Seletor3 {
+			Propriedade1: valor1;
+			Propriedade2: valor2;
+			Propriedade3: valor3;}
+		</pre>
+	</code>
+	<p>
+		Uma lista com todas as propriedades por ser encontrada no link: https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Reference
+	</p>
+	<p>
+		Crie um novo arquivo com o nome de “base.css” e adicione o código escrito abaixo:
+	</p>
+	<code>
+		<pre>
+		<b>#container_principal</b> {
+			<b>border: 1px solid;</b> /*cria uma borda ao redor da divisão*/
+			<b>border-radius: 5px;</b>  /*arredonda as extremidades da borda criada*/
+			<b>width: 800px;</b> /*altera a largura do elemento*/
+			<b>height: 300px;</b> /*altera a altura do elemento*/
+			<b>margin: auto;</b> /*altera automaticamente o margem do elemento em relação à onde ele está inserido. No caso deste elemento, a margem é em relação ao espaço geral do navegador*/}
+		</pre>
+	</code>
+	<p>
+		Note o uso do símbolo “#” antes do seletor “container_principal” indicando que o elemento selecionado faz referência a um “id” da página web. Caso a intenção seja selecionar um “class”, o símbolo utilizado antes do seletor seria “.”.
+	</p>
+	<p>
+		Para visualizar as alterações do CSS na página web é necessário referenciar o arquivo CSS dentro do arquivo HTML. Para isso, é necessário o uso de uma tag chamada “link”, como descrito baixo.
+	</p>
+	<code>
+		<pre>
+			&lt;!DOCTYPE html>
+			&lt;html>
+			&lt;head>
+			<span class="red">&lt;link rel="stylesheet" type="text/css" href="css/base.css"></span>
+			&lt;title>Titulo&lt;/title>
+			&lt;/head>
+			&lt;body>
+			&lt;div id="container_principal">&lt;/div>
+			&lt;/body>
+			&lt;/html>
+		</pre>
+	</code>
+	<p>
+		Em um navegador web, acesse o link username.koding.io para ver o resultado.
+	</p>
+	<h2>Introdução a Javascript e D3</h2>
+	<p>Javascript é uma linguagem usada para tornar as páginas web dinâmicas através de scripts executados no cliente-side. Por exemplo, como Javascript você pode:</p>
+	<ul>
+		<li>Criar interação com o usuário – formulários, respostas para interação de cliques, etc.</li>
+		<li>Controlar o Browser – Apresentar mensagens de erro, redimensionar o tamanho da janela, fechar a janela, etc.</li>
+		<li>Multi-tarefas – É possível executar múltiplas operações ao mesmo tempo.</li>
+		<li>Mudar o conteúdo HTML dinamicamente</li>
+		<li>Receber e enviar dados </li>
+	</ul>
+	<p>
+		O script Javascript será usado para ler os dados e gerar as visualizações. Para começar, crie um arquivo com o nome de “script.js”. Para ler os arquivos em CSV será usado a biblioteca d3.js para manipulação dos dados. Copie o seguinte código dentro do arquivo “script.js”.
+	</p>
+	<code>
+		<pre>
+			var dsv = d3.dsv(";", "text/plain");
+
+			dsv("data/atores.csv", function(d) {
+			var values = [];
+			for(var key in d){
+			values.push(d[key]);
+		}
+		return {values}
+	}, function(error, rows) {
+	console.log(rows);
+});
+</pre>
+</code>
+<p>
+	O d3.dsv é uma função para leitura de arquivos CSV onde se é escolhido o delimitador desejado. No caso dos arquivos de atores, o delimitador é um ponto e virgula “;”. Após a leitura, uma função de call-back é chamada para converte os dados em um objeto Javascript.
+</p>
+<code>
+	<pre>
+		var dsv = d3.dsv(";", "text/plain");
+
+		dsv("data/atores.csv", <span class="red">function(d) {
+		var values = [];
+		for(var key in d){
+		values.push(d[key]);
+	}
+	return {values}
+}</span>, function(error, rows) {
+console.log(rows);
+});
+</pre>
+</code>
+<p>
+	No arquivo index.html, temos que referenciar o código Javascript que foi criado. Isso é feito com a adição da seguinte Tag (parecido com o que foi usado para referenciar o arquivo CSS). Além disso, a biblioteca d3.js também deve ser referenciada. Como esta biblioteca é disponibilizada gratuitamente pelo site d3js.org, podemos usar uma URL para fazer esta referência.
+</p>
+<code>
+	<pre>
+		&lt;!DOCTYPE html>
+		&lt;html>
+		&lt;header>
+		&lt;!-- CARREGA AS DEPENDENCIAS -->
+		<span class="red">&lt;script src="http://d3js.org/d3.v3.min.js">&lt;/script></span>
+		&lt;!-- CARREGA O ARQUIVO CSS -->
+		&lt;link rel="stylesheet" type="text/css" href="css/base.css">
+		&lt;!-- CARREGA O ARQUIVO JAVASCRIPT -->
+		<span class="red">&lt;script type="text/javascript" src="js/script.js">&lt;/script></span>
+		&lt;/header>
+		&lt;body>
+		&lt;div id="main_container">&lt;/div>
+		&lt;/body>
+		&lt;/html>
+	</pre>
+</code>
+<p>
+	Acesse a página da aplicação novamente, clique com o botão direto do mouse dentro da página e abra o inspetor de elementos. Com o inspetor aberto, entre na aba “console” para ver a estrutura criada.
+</p>
 </body>
+</html>

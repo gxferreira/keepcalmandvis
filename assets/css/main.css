@@ -1,0 +1,21 @@
+.baseImage{
+	width: 500px;
+	height: 200px;
+}
+
+.red{
+	color: red;
+}
+
+pre, code{
+	direction: ltr;
+	text-align: left;
+}
+pre {border: solid 1px blue;
+	font-size: 1 em; 
+ 	color: blue; 
+	margin: 10px; 
+	padding:10px; 
+	background: #FFFFB3}
+code {font-size:1 em; 
+	color: #008099}
